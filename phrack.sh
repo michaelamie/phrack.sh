@@ -18,8 +18,7 @@ ISSUES=${2:-67}
 
 #########################################################
 
-# Backup the IFS variable to change the seperator char
-ORIGINAL_IFS=${IFS}
+# Set the field seperator string to be the newline char.
 IFS=$'\n'
 
 # Store absolute path ${DIR}
@@ -73,6 +72,3 @@ do
     done
     rmdir ${d}
 done
-
-# Restore the regular IFS before exiting
-IFS=${ORIGINAL_IFS}
