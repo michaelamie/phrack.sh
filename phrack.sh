@@ -33,7 +33,6 @@ N=$(seq 1 ${ISSUES})
 if [ -d ${DIR} ]; then 
     echo -n "Since the directory \"${DIR}\" already exists, "
     echo "the script cannot execute."
-    IFS=${ORIGINAL_IFS}
     exit
 else
     mkdir ${DIR}; cd ${DIR}
